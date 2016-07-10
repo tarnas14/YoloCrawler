@@ -1,0 +1,19 @@
+{
+  "MinRoomNeighboursCount": 1,
+  "MaxRoomNeighboursCount": 3,
+  "RoomCountBetween": {
+    "Item1": 4,
+    "Item2": 10
+  },
+  "HealingShrines": {
+    "UseCountRange": {
+      "Item1": 1,
+      "Item2": 2
+    },
+    "HealedHitpointsBetween": {
+      "Item1": 2,
+      "Item2": 3
+    },
+    "ShrinePercentageSpawnChance": 33
+  }
+}

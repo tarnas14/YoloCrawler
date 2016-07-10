@@ -10,13 +10,11 @@
 
         public static List<string> Load()
         {
-            using (var streamReader = new StreamReader(MonsterNamesFileName))
-            {
-                var json = streamReader.ReadToEnd();
-                var monsters = JsonConvert.DeserializeObject<List<string>>(json);
+            
+            var json = File.ReadAllText(MonsterNamesFileName);
+            var monsters = JsonConvert.DeserializeObject<List<string>>(json);
 
-                return monsters;
-            }
+            return monsters;
         }
     }
 }

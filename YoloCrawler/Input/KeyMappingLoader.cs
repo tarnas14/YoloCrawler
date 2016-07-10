@@ -9,13 +9,10 @@
 
         public static KeyMapping Load()
         {
-            using (var streamReader = new StreamReader(KeyMappingFileName))
-            {
-                var json = streamReader.ReadToEnd();
-                var keyMapping = JsonConvert.DeserializeObject<KeyMapping>(json);
+            var json = File.ReadAllText(KeyMappingFileName);
+            var keyMapping = JsonConvert.DeserializeObject<KeyMapping>(json);
 
-                return keyMapping;
-            }
+            return keyMapping;
         }
     }
 }
